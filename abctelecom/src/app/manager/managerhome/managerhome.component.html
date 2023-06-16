@@ -1,0 +1,76 @@
+<div class="top">
+    <div class="container-fluid" style="height: 8%;">
+      <div class="row adna">
+        <div class="col-3">
+        </div>
+        <div class="col-8 ">
+          <p style="color:azure; font-size: 30px; margin-left: 140px;">ABC Telecom </p>
+        </div>
+        <div class="col-1">
+          <button style="margin-top: 15px;" (click)="logout()">logout</button>
+        </div>
+      </div>
+   </div>
+   <div class="container-fluid jo">
+    <div class="row changepass hhhh">
+        <div class="col-8" style="height: 100%; overflow-y: auto;">
+          <div class="sec1">
+            <table class="table table-bordered">
+              <tr class="table-row">
+                  <th class="table-cell">ticket number</th>
+                  <th class="table-cell">complaint</th>
+                  <th class="table-cell ">status</th>
+                  <th class="table-cell ">pincode</th>
+                  <th class="table-cell">assignedto</th>
+                  <!-- <td class="table-cell"> update</td> -->
+              </tr>
+              <tbody class="table-row" >
+                  <tr *ngFor="let h of ff.c;let y=index;">
+                      <td class="table-cell">{{h.ticketno}}</td>
+                      <td class="table-cell">{{h.complaint}}</td>
+                      <td class="table-cell">{{h.status}}</td>
+                      <td class="table-cell">{{h.pincode}}</td>
+                      <td class="table-cell" >
+                        <div *ngIf="h.asignedto==null; else elseblock;">
+                          <select #assign (change)="assigned($event,h.ticketno)">
+                            <option value="default">---</option>
+                            <option *ngFor="let r of ff.l" value="{{r.username}}">
+                              {{r.name}}
+                            </option>
+                          </select>
+                          </div>
+                          <ng-template #elseblock>
+                            {{h.asignedto}}
+                         </ng-template>
+                      </td>    
+                  </tr>
+              </tbody>
+          </table>
+          </div>
+        </div>
+        <div class="col-4" style="height: 100%; overflow-y: auto;">
+            <table class="table table-bordered">
+                <tr class="table-row">
+                    <th class="table-cell">engineer name</th>
+                    <th class="table-cell">code</th>
+                    <th class="table-cell ">pincode</th>
+                </tr>
+                <tbody class="table-row" >
+                    <tr *ngFor="let h of ff.l;let y=index;">
+                        <td class="table-cell">{{h.name}}</td>
+                        <td class="table-cell">{{h.username}}</td>
+                        <td class="table-cell">{{h.pincode}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+  </div>
+   </div>
+   <div class="container-fluid" style="height: 8%;">
+      <div class="row adfo">
+         <h5 style="color: azure;"> &#169; copyright 2011</h5>
+       </div>
+   </div>
+  </div>
+  
+ 

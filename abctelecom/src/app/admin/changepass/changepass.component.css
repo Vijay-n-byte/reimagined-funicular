@@ -1,0 +1,21 @@
+.changepass{
+    height:100%;
+    width:auto;
+    border: 1px solid rebeccapurple;
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 100px;
+
+}
+ul li{
+    font-size: 20px;
+    margin-bottom: 40px;
+
+}
+.fp{
+     /* overflow-y: auto;  */
+    height:100%;
+    
+}
