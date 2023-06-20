@@ -13,6 +13,8 @@ import { ManagersigninComponent } from './managersignin/managersignin.component'
 import { ManagerhomeComponent } from './manager/managerhome/managerhome.component';
 import { EngineersiginComponent } from './engineersigin/engineersigin.component';
 import { EngineerhomeComponent } from './engineer/engineerhome/engineerhome.component';
+import { AdminhomemanagerComponent } from './admin/adminhomemanager/adminhomemanager.component';
+import { AdminhomeengineerComponent } from './admin/adminhomeengineer/adminhomeengineer.component';
 const routes: Routes = [
   {path:"",component:WelcomeComponent},
   {path:"customerlogin",component:AdminsigninComponent},
@@ -21,7 +23,11 @@ const routes: Routes = [
   {path:"managerhome",component:ManagerhomeComponent},
   {path:"engineerlogin",component:EngineersiginComponent},
   {path:"engineerhome",component:EngineerhomeComponent},
-  {path:"adminpage",component:AdminComponent,children:[{path:"customeredit",component:AdminhomeComponent}]},
+  {path:"adminpage",component:AdminComponent,children:[{path:"customeredit",component:AdminhomeComponent},
+  {path:"manageredit",component:AdminhomemanagerComponent},
+  {path:"engineeredit",component:AdminhomeengineerComponent}
+]},
+  
   {path:"customerhome",component:CustomerComponent,children:[{path:"raiseticket",component:TicketComponent},
   {path:"tickethistory",component:HistoryComponent}]},
 ];
