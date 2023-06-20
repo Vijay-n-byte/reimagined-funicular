@@ -6,7 +6,8 @@ import { ChangepassComponent } from './changepass/changepass.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { PopupaddComponent } from './popupadd/popupadd.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-
+import { AdminhomemanagerComponent } from './adminhomemanager/adminhomemanager.component';
+import { AdminhomeengineerComponent } from './adminhomeengineer/adminhomeengineer.component';
 
 
 @NgModule({
@@ -15,6 +16,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     AdminComponent,
     ChangepassComponent,
     PopupaddComponent,
+     AdminhomemanagerComponent,
+    AdminhomeengineerComponent,
    
   ],
   imports: [
