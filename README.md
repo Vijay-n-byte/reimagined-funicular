@@ -14,9 +14,9 @@ ABC Telecom Ltd. is one of India’s major telecommunication service providers o
 Scope:
 The system should be a web-based application, developed using spring framework as a backend and angular as a front-end that performs the following functions:
     1.Enables the Administrator to create and manages the lifecycle of different types of users
-Customer
-Manager
-Engineer
+                       Customer
+                       Manager
+                       Engineer
      2. Enables the customers to login to the portal to raise and track complaints related to the services availed by them
 
      3. Enables the manager to login, view the complaints raised by the customers and assign the ticket to the engineers based on the PIN Code
